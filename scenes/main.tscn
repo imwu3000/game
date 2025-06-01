@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4x0v0y0x0y0x"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_abcde"]
+
+[node name="Main" type="Control"]
+layout_mode = 3 # Full Rect
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_abcde")
+
+[node name="ResourceDisplay" type="HBoxContainer" parent="."]
+layout_mode = 0 # Position manually for now
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 400.0
+offset_bottom = 50.0
+
+[node name="FoodLabel" type="Label" parent="ResourceDisplay"]
+layout_mode = 2
+text = "Food: 0"
+
+[node name="WoodLabel" type="Label" parent="ResourceDisplay"]
+layout_mode = 2
+text = "Wood: 0"
+offset_left = 70.0 # Manual spacing for now
+
+[node name="StoneLabel" type="Label" parent="ResourceDisplay"]
+layout_mode = 2
+text = "Stone: 0"
+offset_left = 140.0 # Manual spacing
+
+[node name="KnowledgeLabel" type="Label" parent="ResourceDisplay"]
+layout_mode = 2
+text = "Knowledge: 0"
+offset_left = 220.0 # Manual spacing
+
+[node name="EraLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 60.0
+offset_right = 200.0
+offset_bottom = 83.0
+text = "Current Era: Stone Age"
+
+[node name="TechTreeButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1100.0
+offset_top = 10.0
+offset_right = 1250.0
+offset_bottom = 50.0
+text = "Open Tech Tree"
+
+[node name="GameViewPlaceholder" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 100.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+# This panel will just visually represent where the game map/world would be.
+# We can add a stylebox to make it visible if needed, but for now, its presence is enough.
+
+EOF
